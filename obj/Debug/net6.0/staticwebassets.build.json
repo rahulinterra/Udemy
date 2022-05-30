@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SVcZkQ6AY9laUNXNekYC9ANUmvbSLQe7GEsqWdFiITM=",
+  "Hash": "oMwGaR5/aXCmMVBCEZBM336Pwker8JKkRwmOb1AGrBY=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Product\\bc5e44a6-8a2a-47ad-902b-5b4928a22bbe.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\Images\\Product\\d9bb8066-a32d-47f4-8667-93997a6bcef4.png",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "Images/Product/d9bb8066-a32d-47f4-8667-93997a6bcef4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Product\\d9bb8066-a32d-47f4-8667-93997a6bcef4.png"
     },
     {
       "Identity": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\js\\site.js",
