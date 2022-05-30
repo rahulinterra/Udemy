@@ -15,6 +15,7 @@ namespace CRUD.Data
         public DbSet<ApplicationType> ApplicationType { get; set; }
         public DbSet<Product> Product { get; set; }
         public object Category { get; internal set; }
+        public DbSet <ApplicationUser> ApplicationUser { get; set; }
     }
 }
 
