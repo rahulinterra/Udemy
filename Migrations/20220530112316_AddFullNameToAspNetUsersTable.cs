@@ -8,17 +8,6 @@ namespace CRUD.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Discriminator",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "FullName",
-                table: "AspNetUsers");
-        }
-
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
             migrationBuilder.AddColumn<string>(
                 name: "Discriminator",
                 table: "AspNetUsers",
@@ -31,6 +20,17 @@ namespace CRUD.Migrations
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
                 nullable: true);
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "Discriminator",
+                table: "AspNetUsers");
+
+            migrationBuilder.DropColumn(
+                name: "FullName",
+                table: "AspNetUsers");
         }
     }
 }
