@@ -2,13 +2,14 @@
 using CRUD.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using CRUD.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Add services to the container.
-builder.Services.AddDefaultIdentity<IdentityUser>()
+builder.Services.AddIdentity<IdentityUser,IdentityRole>()
+    .AddDefaultTokenProviders().AddDefaultUI()
     .AddEntityFrameworkStores<ApplicationDBContext>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(
