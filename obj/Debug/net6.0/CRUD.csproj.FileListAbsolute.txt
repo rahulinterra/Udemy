@@ -1696,3 +1696,4 @@ C:\Users\RahulS\Desktop\Udemy\Udemy\obj\Debug\net6.0\scopedcss\bundle\CRUD.style
 C:\Users\RahulS\Desktop\Udemy\Udemy\obj\Debug\net6.0\scopedcss\projectbundle\CRUD.bundle.scp.css
 C:\Users\RahulS\Desktop\Udemy\Udemy\obj\Debug\net6.0\CRUD.csproj.CopyComplete
 C:\Users\RahulS\Desktop\Udemy\Udemy\obj\Debug\net6.0\CRUD.genruntimeconfig.cache
+C:\Users\RahulS\Desktop\Udemy\Udemy\bin\Debug\net6.0\Mailjet.Client.dll

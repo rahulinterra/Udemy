@@ -11,6 +11,19 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Mailjet.Api/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Mailjet.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Mailjet.Client.dll": {}
+        }
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -3322,6 +3335,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Mailjet.Api/1.0.1": {
+      "sha512": "NeB2+bLdbECbVBTZeKteag+dBTpiTmXDf0zl2BRU4Kykg/wO/gIPfBY2xz92h6y9XToJWjfaqQ/ZmESqQMuIIg==",
+      "type": "package",
+      "path": "mailjet.api/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Mailjet.Client.dll",
+        "lib/netstandard1.1/Mailjet.Client.dll",
+        "mailjet.api.1.0.1.nupkg.sha512",
+        "mailjet.api.nuspec"
       ]
     },
     "MessagePack/2.1.152": {
@@ -10221,6 +10247,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Mailjet.Api >= 1.0.1",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.5",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.4",
@@ -10269,6 +10296,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Mailjet.Api": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.5, )"

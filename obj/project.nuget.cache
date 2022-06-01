@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "s2XnUl331/yX6sGZSc0K4x8MORc1fevBAAn9ZjkaMLlaHaJmD8pXLv4ISv2qdPGKBir+YdrRQEkev5oQ4HQBgg==",
+  "dgSpecHash": "4uWGKTAB7hEgUmwMyXma8oPLs54yxA3rXoA0xy5nTMc1rMHwvYbWzcKEyIPgPiLaEMmdVPi+1d4HGp+iK/WYVw==",
   "success": true,
   "projectFilePath": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\CRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RahulS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\RahulS\\.nuget\\packages\\mailjet.api\\1.0.1\\mailjet.api.1.0.1.nupkg.sha512",
     "C:\\Users\\RahulS\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\RahulS\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\RahulS\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

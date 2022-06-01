@@ -34,6 +34,7 @@
     ".NETCoreApp,Version=v6.0": {
       "CRUD/1.0.0": {
         "dependencies": {
+          "Mailjet.Api": "1.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.5",
           "Microsoft.AspNetCore.Identity.UI": "6.0.5",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.4",
@@ -343,6 +344,21 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        }
+      },
+      "Mailjet.Api/1.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Mailjet.Client.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Mailjet.Client.dll": {}
         }
       },
       "MessagePack/2.1.152": {
@@ -4666,6 +4682,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Mailjet.Api/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NeB2+bLdbECbVBTZeKteag+dBTpiTmXDf0zl2BRU4Kykg/wO/gIPfBY2xz92h6y9XToJWjfaqQ/ZmESqQMuIIg==",
+      "path": "mailjet.api/1.0.1",
+      "hashPath": "mailjet.api.1.0.1.nupkg.sha512"
     },
     "MessagePack/2.1.152": {
       "type": "package",
