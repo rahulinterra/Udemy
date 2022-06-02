@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8tvX42G5IbMb6eGzxLXVyKxPj5HLhaPYjHzITDNfM80=",
+  "Hash": "OW1Djg7NdqRc9bgv506t1VqTfPYDjhw/WJubcvMEDOw=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -2157,6 +2157,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\templates\\Inquiry.html",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "templates/Inquiry.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\Inquiry.html"
     }
   ]
 }

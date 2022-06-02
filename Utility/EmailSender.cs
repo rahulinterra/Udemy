@@ -5,15 +5,23 @@ using Newtonsoft.Json.Linq;
 
 namespace CRUD.Utility
 {
+   
     public class EmailSender : IEmailSender
     {
+        private readonly IConfiguration _configuration;
+        public MailJetSettings _mailjetsettings { get; set; }
+        public EmailSender(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-           return Execute(email, subject, htmlMessage);
+            return Execute(email, subject, htmlMessage);
         }
-        public async Task Execute (string email, string subject, string body)
+        public async Task Execute(string email, string subject, string body)
         {
-            MailjetClient client = new MailjetClient(Environment.GetEnvironmentVariable("e633c1aba54749961582b11cadabc478"), Environment.GetEnvironmentVariable("a161c5aa5447fcefadc84db90099429a"))
+            _mailjetsettings = _configuration.GetSection("MailJet").Get<MailJetSettings>();
+            MailjetClient client = new MailjetClient(_mailjetsettings.ApiKey, _mailjetsettings.SecretKey)
             {
                 Version = ApiVersion.V3_1,
             };
@@ -26,7 +34,7 @@ namespace CRUD.Utility
       {
        "From",
        new JObject {
-        {"Email", "tellmerahul680@gmail.com"},
+        {"Email", "rahulsharma09072000@gmail.com"},
         {"Name", "Rahul"}
        }
       }, {
@@ -38,19 +46,20 @@ namespace CRUD.Utility
           email
          }, {
           "Name",
-          "CRUD Project"
+          "Rahul"
          }
         }
        }
       }, {
        "Subject",
-      subject
-      }
-      , {
+       subject
+      },  {
        "HTMLPart",
        body
       },
      }
+      
+     
              });
            await client.PostAsync(request);
         }

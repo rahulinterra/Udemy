@@ -63,6 +63,18 @@ namespace CRUD.Controllers
             };
             return View(ProductUserVm);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SummaryPost(ProductUserVm ProductUserVm)
+        {
+
+            return RedirectToAction(nameof(InquiryConfirmation));
+        }
+        public IActionResult InquiryConfirmation()
+        {
+            HttpContext.Session.Clear();
+            return View();
+        }
         public IActionResult Remove(int id)
         {
             List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
