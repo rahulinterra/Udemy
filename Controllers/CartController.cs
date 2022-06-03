@@ -4,8 +4,10 @@ using CRUD.Models.ViewModel;
 using CRUD.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Text;
 
 namespace CRUD.Controllers
 {
@@ -13,10 +15,14 @@ namespace CRUD.Controllers
     public class CartController : Controller
     {
         private readonly ApplicationDBContext _db;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IEmailSender _emailSender;
         public ProductUserVm ProductUserVm { get; set; }
-        public CartController (ApplicationDBContext db)
+        public CartController (ApplicationDBContext db, IWebHostEnvironment webHostEnvironment,IEmailSender emailSender)
         {
             _db = db;
+            _webHostEnvironment = webHostEnvironment;
+            _emailSender = emailSender;
         }
         public IActionResult Index()
         {
@@ -65,8 +71,28 @@ namespace CRUD.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SummaryPost(ProductUserVm ProductUserVm)
+        [ActionName("Summary")]
+        public async Task<IActionResult> SummaryPost(ProductUserVm ProductUserVm)
         {
+            var PathToTemplate = _webHostEnvironment.WebRootPath + Path.DirectorySeparatorChar.ToString()
+            + "templates" + Path.DirectorySeparatorChar.ToString() + "Inquiry.html";
+            var subject = "New Inquiry";
+            string Htmlbody = "";
+            using (StreamReader sr = System.IO.File.OpenText(PathToTemplate))
+            {
+                Htmlbody = sr.ReadToEnd();
+            }
+            StringBuilder productListSB = new StringBuilder();
+            foreach(var product in ProductUserVm.ProductList)
+            {
+                productListSB.Append($"- Name :{product.Name}<span style='font-size:14px';>(ID:{product.Id})</span></br>");
+
+            }
+            string Messagebody = string.Format(Htmlbody, ProductUserVm.ApplicationUser.FullName
+                , ProductUserVm.ApplicationUser.Email,
+                ProductUserVm.ApplicationUser.PhoneNumber,
+                productListSB.ToString());
+            await _emailSender.SendEmailAsync(WC.EmailAdmin, subject, Messagebody);
 
             return RedirectToAction(nameof(InquiryConfirmation));
         }

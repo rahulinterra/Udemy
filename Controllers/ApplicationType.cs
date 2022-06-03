@@ -1,11 +1,15 @@
 ﻿using CRUD.Models;
 using Microsoft.AspNetCore.Mvc;
 using CRUD.Data;
+using CRUD;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Info.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
     public class ApplicationTypeController : Controller
     {
+       
         private readonly ApplicationDBContext _DB;
         public ApplicationTypeController(ApplicationDBContext DB)
         {

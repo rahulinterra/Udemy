@@ -7,11 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using CRUD.Data;
 using static System.Net.Mime.MediaTypeNames;
 using CRUD;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Info.Controllers
 {
 
-
+    [Authorize(Roles=WC.AdminRole)]
     public class ProductController : Controller
     {
         private readonly ApplicationDBContext _db;

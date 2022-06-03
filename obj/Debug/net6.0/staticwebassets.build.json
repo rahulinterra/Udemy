@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OW1Djg7NdqRc9bgv506t1VqTfPYDjhw/WJubcvMEDOw=",
+  "Hash": "ANx7duMIGEGwZ2TEKpy4vaajk1S4Z3lprvRB5X5UQ9U=",
   "Source": "CRUD",
   "BasePath": "_content/CRUD",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\Images\\patio.jpg",
+      "SourceId": "CRUD",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\",
+      "BasePath": "_content/CRUD",
+      "RelativePath": "Images/patio.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\patio.jpg"
     },
     {
       "Identity": "C:\\Users\\RahulS\\Desktop\\Udemy\\Udemy\\wwwroot\\Images\\Product\\49684e9d-def6-472c-91cd-c0f2bb56ad41.png",

@@ -43,9 +43,11 @@
 
 
 
-                    
-                        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 
+                         @if (User.IsInRole(WC.AdminRole))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            <b>Content Management</b>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -57,7 +59,8 @@
             @*<li>< class="dropdown-divider"></li>*@
           </ul>
         </li>
-                                <li>
+        }
+                      <li>
                             @if (HttpContextAccessor.HttpContext.Session.Get<List<ShoppingCart>>(WC.SessionCart) != null)
                             {
                                 <a asp-action="Index" asp-controller="Cart" class="nav-link">
