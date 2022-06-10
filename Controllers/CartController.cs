@@ -1,7 +1,7 @@
 ﻿using CRUD.Data;
-using CRUD.Models;
-using CRUD.Models.ViewModel;
-using CRUD.Utility;
+using CRUD_Models;
+using CRUD_Models.ViewModel;
+using CRUD_Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.UI.Services;

@@ -1,6 +1,6 @@
 
 using CRUD.Data;
-using CRUD.Utility;
+using CRUD_Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
